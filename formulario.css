@@ -1,0 +1,47 @@
+body{
+    background-image: linear-gradient(to right, rgb(148, 150, 231), rgb(218, 210, 247));
+    font-family: Arial, Helvetica, sans-serif;
+}
+.box{
+    color: rgb(56, 36, 131);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.877);
+    padding: 15px;
+    border-radius: 25px;
+    width: 25%;
+}
+fieldset{
+    border: 3px solid rgb(101, 88, 221);
+}
+legend{
+    border: 1px solid rgb(101, 88, 221);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(101, 88, 221);
+}
+.inputBox{
+    position: relative;
+}
+
+.inputUser{
+    background: none;
+    border: none;/*tirar a borda*/
+    border-bottom: 1px solid white;
+    outline: none;/*tirar a linha de fora do input*/
+    color: white;
+    font-size: 20px;
+    width: 100%;/*comprimento da linha*/
+    letter-spacing: 2px;/*espaço entre cada caracter no input*/
+}
+
+/*Quando clicar no input eu quero que a label vai para cima do imput - por isso a ação é no input*/
+
+.inputUser:focus ~ .labelinput,
+.inputUser:valid ~ .labelinput{
+    top:-20px;
+    font-size:20px;
+    color: dodgerblue;
+}
