@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>FOrmulário dois</title>
+        <link rel="stylesheet" href="formulario.css">
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="Agenda_3_-removebg-preview 2.png">
+            <h1 class="tituloprincipal">FORMULÁRIOS PERSONALIZADOS</h1>
+        </header>
+        <main>
+            <form>
+                <label for="nomesobrenome">Nome e Sobrenome</label>
+                <input type="text" name="nome" id="nomesobrenome" class="input-padrao" placeholder="Seu nome e sobrenome" required>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="input-padrao" placeholder="seuemail@seudominio.com" required>
+                <label for="telefone">Telefone</label>
+                <input type= "tel" name= "telefone" id= "telefone"
+                        class= "FormularioCliente" required placeholder="(XX) XXXXX-XXXXX">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea cols="70" rows="10" id="mensagem" placeholder="Digite seu texto aqui!" required></textarea>
+                    <section>
+                        <p>Como prefere nosso contato?</p>
+                        <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> Email</label>
+                        <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone</label>
+                        <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked> WhatsApp</label>
+                    </section>
+                    <section>
+                        <p>Qual horário prefere ser atendido?</p>
+                        <select>
+                            <option>Manhã</option>
+                            <!--dropdpwn - seleções selecionáveis-->
+                            <option>Tarde</option>
+                            <option>Noite</option>
+                        </select>
+                    </section>
+
+                    <label class="checkbox">
+                        <input type="checkbox">Gostaria de receber nossas novidades por email?
+                    </label>
+                        <input type= "submit" value= "Enviar formulário" id= "enviar" class="enviar">
+            </form>
+
+        </main>
+
+        <footer>
+            <img id="logo1" src="Agenda_3_-removebg-preview 2.png">
+            <p class="copyright">&copy; Copyright -- Matheus Klein</p>
+        </footer>
+    </body>
+</html>
