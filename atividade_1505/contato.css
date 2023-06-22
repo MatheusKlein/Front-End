@@ -1,0 +1,30 @@
+header{
+    background-color: black;
+    padding: 20px;
+
+}
+#logo{
+    border-radius: 800px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+main, footer{
+    background-color: black;
+}
+.tituloprincipal{
+    position: absolute;
+    top: 13%;
+    left: 30%;
+    transform: translate(-0%, 150%);
+    font-size: 60px;
+    color: white;
+}
+label{
+    background-color: white;
+}
+main{
+    width: 940px;
+    margin: auto;
+}
