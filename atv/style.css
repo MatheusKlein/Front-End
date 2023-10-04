@@ -1,18 +1,13 @@
-@import url(style/header.css);
-:root{
-    --cor-de-fundo:rgb(187, 156, 140);
-    --branco:white;
-    --degrade:linear-gradient(rgb(155, 35, 155), rgb(78, 5, 78));
+.main_container {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align: center;
+  height: 100px;
 }
-
-body{
-    background-color: var(--cor-de-fundo);
-    font-size: 16px;
-    font-weight: 400px;   
-}
-.slogam{
-        color: rgb(4, 4, 4);
-        font-size: 20px;
-        /*font-family: 'Fantasy', Arial, sans-serif;*/
-        display: none;
+.button_container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
 }
