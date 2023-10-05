@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Avaliação 04/10</title>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(133, 168, 156);
+            }
+            .botao{
+                padding: 2%;
+                display: flex;
+                border-radius: 5%;
+                margin-bottom: 20px;
+                justify-content: center;
+                margin: 2%;
+                margin-top: 25%;
+            }
+        </style>
+    </head>
+
+    <body>
+            <button id="botao1" onclick="Aguarde()" onmouseenter="Ir()" onmouseout="Site()" class="botao">
+                <a href="https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_Parmentier">Estação Parmentier</a>
+            </button>
+
+            <button id="botao2" onclick="Aguarde1()" onmouseenter="Ir1()" onmouseout="Site1()" class="botao">
+                <a href="https://pt.wikipedia.org/wiki/Guion_(Arkansas)">Guion (Arkansas)</a>
+            </button>
+
+            <button id="botao3" onclick="Aguarde2()" onmouseenter="Ir2()" onmouseout="Site2()" class="botao">
+                <a href="https://pt.wikipedia.org/wiki/Fernando_de_Brito">Fernando de Brito</a>
+            </button>
+
+        <script>
+            function Aguarde(){
+                var a = window.document.getElementById('botao1')
+                a.style.background="red"
+            }
+            function Ir(){
+                var e = window.document.getElementById('botao1')
+                e.style.background="yellow"
+            }
+            function Site(){
+                var s = window.document.getElementById('botao1')
+                s.style.background="green"
+            }
+            function Aguarde1(){
+                var a = window.document.getElementById('botao2')
+                a.style.background="red"
+            }
+            function Ir1(){
+                var e = window.document.getElementById('botao2')
+                e.style.background="yellow"
+            }
+            function Site1(){
+                var s = window.document.getElementById('botao2')
+                s.style.background="green"
+            }
+            function Aguarde2(){
+                var a = window.document.getElementById('botao3')
+                a.style.background="red"
+            }
+            function Ir2(){
+                var e = window.document.getElementById('botao3')
+                e.style.background="yellow"
+            }
+            function Site2(){
+                var s = window.document.getElementById('botao3')
+                s.style.background="green"
+            }
+        </script>
+    </body>
+</html>
