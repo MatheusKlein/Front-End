@@ -1,0 +1,35 @@
+body{
+    background-color: lightblue;
+}
+#response-image{
+    width: 250px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#response-label{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+span, label{
+    font-size: 20px;
+}
+#submit{
+    font-size: 15px;
+    width: 200px;
+}
+#nome{
+    font-size: 15px;
+}
+#idade{
+    font-size: 15px;
+}
+body input{
+    margin-bottom: 10px;
+}
+.grandinho {
+    width: 400px;
+}

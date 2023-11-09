@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Identificação</title>
+    <link rel="stylesheet" href="./trabalho.css">
+</head>
+<body>
+    <div class="container">
+    <row>
+    <span>Nome:</span>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+    </row>
+    <row>
+    <span>Idade:</span>
+    <input type="number" id="idade" name="idade" placeholder="Slecione sua idade">
+    </row>
+    <row>
+    <input type="radio" id="masculino" name="genero" value="masculino">
+    <label for="masculino">Masculino</label>
+    <input type="radio" id="feminino" name="genero" value="feminino">
+    <label for="feminino">Feminino</label>
+    <input type="radio" id="naobinario" name="genero" value="naobinario">
+    <label for="naobinario">Não-Binário</label>
+    </row>
+    <button id="submit" onclick="enviarForm()">Enviar</button>
+    <span id="response-label"></span>
+    <img id="response-image">
+</div>
+    <script>
+        function enviarForm() {
+            event.preventDefault();
+
+            var nome = document.getElementById("nome").value;
+            var idade = Number(document.getElementById("idade").value);
+            var masculino = document.getElementById("masculino");
+            var feminino = document.getElementById("feminino");
+            var naobinario= document.getElementById("naobinario");
+
+            var flexResponse = document.getElementById("flex-response");
+            var responseText = document.getElementById("response-label");
+            var responseImage = document.getElementById("response-image");
+
+            if(!nome) return alert("Você não digitou seu nome.");
+            if(!idade) return alert("Você não escolheu sua idade.");
+            if(idade < 0) return alert("A idade precisa ser um valor positivo.");
+            if(!masculino.checked && !feminino.checked && !naobinario.checked) return alert("Você não selecionou um gênero.");
+            responseImage.style.width = '250px';
+
+            if(masculino.checked) {
+                responseText.innerHTML = `Você se chama ${nome}, tem ${idade} e é um Homem. `
+                if(idade < 5) {
+                    responseImage.src="./homem criança.png";
+                }else if (idade < 18) {
+                    responseImage.src="./homem jovem.png";
+                }else if (idade < 65) {
+                    responseImage.src="./homem adulto.png";
+                } else {
+                    responseImage.src="homem velho.jpeg";
+                }
+            }
+            if(feminino.checked) {
+                responseText.innerHTML = `Você se chama ${nome}, tem ${idade} e é uma Mulher. `
+                if(idade < 5) {
+                    responseImage.src="./mulher criança.png";
+                }else if (idade < 18) {
+                    responseImage.style.width = '150px';
+                    responseImage.src="./mulher jovem.png";
+                }else if (idade < 65) {
+                    responseImage.style.width = '150px';
+                    responseImage.src="./mulher adulta.png";
+                } else {
+                    responseImage.style.width = '150px';
+                    responseImage.src="./mulher velha.png";
+                }
+            }
+            if(naobinario.checked) {
+                responseText.innerHTML = `Você se chama ${nome}, tem ${idade} e se identifica como não-binário. `
+                if(idade < 5) {
+                    responseImage.style.width = '400px';
+                    responseImage.src="./nb criança.png";
+                }else if (idade < 18) {
+                    responseImage.src="./nb jovem.png";
+                }else if (idade < 65) {
+                    responseImage.src="./nb adulto.png";
+                } else {
+                    responseImage.src="./nb velho.png";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
