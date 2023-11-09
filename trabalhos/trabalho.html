@@ -46,13 +46,13 @@
         if(radioMasculino.checked) {
             responseText.innerHTML = `Você se chama ${nome}, tem ${idade} e é um Homem. `
             if(idade < 5) {
-                responseImage.src="";
+                responseImage.src=",/homem criança.jpeg";
             }else if (idade < 18) {
-                responseImage.src="";
+                responseImage.src="./homem jovem.jpeg";
             }else if (idade < 65) {
-                responseImage.src="";
+                responseImage.src="./homem adulto.jpeg";
             } else {
-                responseImage.src="";
+                responseImage.src="./homem velho.jpeg";
             }
         }
         if(radioFeminino.checked) {
@@ -64,19 +64,19 @@
             }else if (idade < 65) {
                 responseImage.src="./mulher adulta.jpeg";
             } else {
-                responseImage.src="";
+                responseImage.src="./mulher velha.jpeg";
             }
         }
         if(radioNaobinario.checked) {
             responseText.innerHTML = `Você se chama ${nome}, tem ${idade} e se identifica como não-binário. `
             if(idade < 5) {
-                responseImage.src="";
+                responseImage.src="./nb criança.jpeg";
             }else if (idade < 18) {
                 responseImage.src="./nb jovem.jpeg";
             }else if (idade < 65) {
-                responseImage.src="";
+                responseImage.src="./nb adulto.jpeg";
             } else {
-                responseImage.src="";
+                responseImage.src="./nb velho.jpeg";
             }
         }
     </script>
